@@ -24,7 +24,7 @@ export function showChoiceModal(title, options, callback) {
 			<div class="ob-modal-header">
 				<h3>${title}</h3>
 				<button class="ob-modal-close" title="Close">
-					<span class="material-icons-round">close</span>
+					<span class="material-icons-round" translate="no">close</span>
 				</button>
 			</div>
 			<div class="ob-modal-body">

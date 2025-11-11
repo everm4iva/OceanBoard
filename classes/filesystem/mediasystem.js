@@ -299,7 +299,7 @@ function showMediaContextMenu(event, mediaId) {
 	// Remove existing context menu
 	const existing = document.querySelector('.ob-media-context-menu');
 	if (existing) existing.remove();
-	
+
 	const media = getMedia(mediaId);
 	if (!media) return;
 	
@@ -316,7 +316,7 @@ function showMediaContextMenu(event, mediaId) {
 	options.forEach(opt => {
 		const item = document.createElement('div');
 		item.className = 'ob-context-menu-item';
-		item.innerHTML = `<span class="material-icons-round">${opt.icon}</span>${opt.label}`;
+		item.innerHTML = `<span class="material-icons-round" translate="no">${opt.icon}</span>${opt.label}`;
 		item.onclick = () => {
 			opt.action();
 			menu.remove();
@@ -385,7 +385,7 @@ function showMediaSectionContextMenu(event) {
 	options.forEach(opt => {
 		const item = document.createElement('div');
 		item.className = 'ob-context-menu-item';
-		item.innerHTML = `<span class="material-icons-round">${opt.icon}</span>${opt.label}`;
+		item.innerHTML = `<span class="material-icons-round" translate="no">${opt.icon}</span>${opt.label}`;
 		item.onclick = () => {
 			opt.action();
 			menu.remove();

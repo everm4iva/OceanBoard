@@ -15,47 +15,47 @@ export function createMarkdownEditor(container, initialText = '') {
             </div>
             <div class="ob-md-toolbar">
                 <button class="ob-md-btn" data-action="bold" title="Bold">
-                    <span class="material-icons-round">format_bold</span>
+                    <span class="material-icons-round" translate="no">format_bold</span>
                 </button>
                 <button class="ob-md-btn" data-action="italic" title="Italic">
-                    <span class="material-icons-round">format_italic</span>
+                    <span class="material-icons-round" translate="no">format_italic</span>
                 </button>
                 <button class="ob-md-btn" data-action="strikethrough" title="Strikethrough">
-                    <span class="material-icons-round">format_strikethrough</span>
+                    <span class="material-icons-round" translate="no">format_strikethrough</span>
                 </button>
                 <div class="ob-md-divider"></div>
                 <button class="ob-md-btn" data-action="h1" title="Heading 1">
-                    <span class="material-icons-round">title</span>
+                    <span class="material-icons-round" translate="no">title</span>
                 </button>
                 <button class="ob-md-btn" data-action="h2" title="Heading 2">
-                    <span class="material-icons-round">subtitles</span>
+                    <span class="material-icons-round" translate="no">subtitles</span>
                 </button>
                 <button class="ob-md-btn" data-action="h3" title="Heading 3">
-                    <span class="material-icons-round">text_fields</span>
+                    <span class="material-icons-round" translate="no">text_fields</span>
                 </button>
                 <div class="ob-md-divider"></div>
                 <button class="ob-md-btn" data-action="list" title="Bullet List">
-                    <span class="material-icons-round">format_list_bulleted</span>
+                    <span class="material-icons-round" translate="no">format_list_bulleted</span>
                 </button>
                 <button class="ob-md-btn" data-action="number" title="Numbered List">
-                    <span class="material-icons-round">format_list_numbered</span>
+                    <span class="material-icons-round" translate="no">format_list_numbered</span>
                 </button>
                 <button class="ob-md-btn" data-action="quote" title="Quote">
-                    <span class="material-icons-round">format_quote</span>
+                    <span class="material-icons-round" translate="no">format_quote</span>
                 </button>
                 <div class="ob-md-divider"></div>
                 <button class="ob-md-btn" data-action="code" title="Inline Code">
-                    <span class="material-icons-round">code</span>
+                    <span class="material-icons-round" translate="no">code</span>
                 </button>
                 <button class="ob-md-btn" data-action="link" title="Link">
-                    <span class="material-icons-round">link</span>
+                    <span class="material-icons-round" translate="no">link</span>
                 </button>
                 <button class="ob-md-btn" data-action="image" title="Image">
-                    <span class="material-icons-round">image</span>
+                    <span class="material-icons-round" translate="no">image</span>
                 </button>
                 <div class="ob-md-divider"></div>
                 <button class="ob-md-btn ob-md-presentation-btn" data-action="presentation" title="Presentation Mode">
-                    <span class="material-icons-round">visibility</span>
+                    <span class="material-icons-round" translate="no">visibility</span>
                 </button>
             </div>
         </div>
@@ -293,7 +293,7 @@ function showMediaMentionContextMenu(event, mention, mediaId, mentionStart, ment
     options.forEach(opt => {
         const item = document.createElement('div');
         item.className = 'ob-context-menu-item';
-        item.innerHTML = `<span class="material-icons-round">${opt.icon}</span>${opt.label}`;
+        item.innerHTML = `<span class="material-icons-round" translate="no">${opt.icon}</span>${opt.label}`;
         item.onclick = () => {
             opt.action();
             menu.remove();

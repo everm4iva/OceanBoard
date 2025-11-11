@@ -17,52 +17,29 @@ OceanBoard aims to be a simple creative tool for storytellers, writers, and worl
 
 ---
 
-## **Release Timeline**
+## **All Features**
 
-### **v0.0.5** - More of more (Q2 2025)
-**Features:**
-- [ ] Search & filter system
-- [ ] Keyboard shortcuts
-- [ ] Command palette (Cmd/Ctrl+K)
-- [ ] Quick file switcher (Cmd/Ctrl+P)
-- [ ] Multi-file selection
-- [ ] Batch operations
+- [x] Search & filter system
+- [x] Keyboard shortcuts
+- [x] Command palette (Cmd/Ctrl+K)
+- [x] Quick file switcher (Cmd/Ctrl+P)
+- [x] Multi-file selection
 - [ ] Tags system
-- [ ] File templates
+- [ ] Templates
+- [ ] Color themes
+- [ ] Ui themes
+- [ ] icon/font themes
+- [ ] SpellCheck
+- [ ] Code support
+- [ ] Visual code
+- [ ] Export to: PDF, docs, presentation file
+- [ ] Better Link System/Attribute System
 - [ ] Smart suggestions
-- [ ] Word count & statistics
+- [x] Word count & statistics
 - [ ] Writing goals
 - [ ] Daily streak tracking
 
 **Goal:** Help writers stay motivated and organized!
-
-## **Feature Categories**
-
-### **Search & Discovery**
-
-#### Coming in v0.0.5
-- **Global Search**
-  - Search all files in current series
-  - Search all series
-  - Search history
-
-- **Smart Filtering**
-  - Filter by file type
-  - Filter by season
-  - Filter by date modified
-  - Filter by tags (when implemented)
-
-- **Quick Switcher**
-  - Cmd/Ctrl+P to open
-  - Recent files first
-  - Keyboard navigation
-
-#### Future (v0.0.6+)
-- **Advanced Search**
-  - Search in trash
-  - Search in specific seasons
-  - Exclude patterns
-  - Search and replace
 
 ---
 

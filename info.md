@@ -17,10 +17,10 @@ OceanBoard is a **free, offline-first creative workspace** for writers, storytel
 ### **Top Level**
 ```
 OceanBoardBeta/
-├── changelog.md            # Version history
+├── changelog.md
+# Version history
 ├── src/                    # Source code (the app!)
 ├── docs/                   # Documentation files
-├── brand/                  # Brand assets & guidelines
 └── shc/                    # Shortcuts & icons
 ```
 
@@ -58,6 +58,7 @@ All user-facing and technical documentation.
 ### **External Libraries**
 - **JSZip** (3.10.1) - Import/export as ZIP files
 - **Marked** (15.0.12) - Support for Markdown
+- **lz-string** (1.5.0) - Compression algorithm
 - That's it!
 
 ### **No Build Process!**
@@ -239,7 +240,7 @@ const velocity = Math.sqrt(dx * dx + dy * dy) / 100;
 
 ### **CSS**
 ```css
-/* BEM-inspired naming */
+/* .ob is cool naming. */
 .ob-sidebar { }
 .ob-sidebar-header { }
 .ob-sidebar-header--active { }
@@ -264,33 +265,6 @@ padding: var(--spacing-md);
 <!-- Data attributes for JS -->
 <button data-action="save" data-id="123">
 ```
-
----
-
-## **Common Issues**
-
-### **LocalStorage Full**
-- Each domain gets ~5-10MB
-- Compress images before upload
-- Export old projects
-- Clear unused data
-
-### **Images Not Loading**
-- Check file paths (relative to index.html)
-- Verify image exists
-- Check browser console for errors
-
-### **Styles Not Applying**
-- Check CSS file is linked
-- Verify class names match
-- Check CSS specificity
-- Clear browser cache
-
-### **JavaScript Errors**
-- Check browser console
-- Verify all modules imported
-- Check for typos in variable names
-- Ensure localStorage available
 
 ---
 
@@ -324,10 +298,7 @@ padding: var(--spacing-md);
 ---
 
 ## **Current Status**
-### **Completed Features** ✅
-- Series system with colors & covers
-- File explorer with seasons/episodes
-- Markdown editor with live preview
+### **Completed Features**
 - Tab system
 - Particle system & animations
 - Import/export (ZIP)
@@ -336,20 +307,26 @@ padding: var(--spacing-md);
 - Drag-and-drop
 - Auto-save
 - Empty states
-
-### **In Development**
 - Search & filter
 - Keyboard shortcuts
 - Command palette
+- Statistics
+
+### **In Development**
 - Tags system
 - Templates
+- Generalized use: not only to create stories tool.
+- To Do Lists
+- More color themes!
+- More settings (like types of icon, types of font, spellcheck)
 
 ### **Planned**
-- Light theme
-- PDF export
-- Statistics
-- Achievements
-- Cloud sync (optional)
+- Code editor
+- Extension system (you can publish & download)
+- Visual coding stuff
+- PDF, docs, presentation file - export
+
+> But keeping everything local. Everything lightweigh. Everything open. Forever
 
 **[Full roadmap →](./docs/roadmap.md)**
 
@@ -359,48 +336,47 @@ padding: var(--spacing-md);
 
 ### **Code**
 - **Languages:** JavaScript, CSS, HTML
-- **Total Lines:** ~5,000+
-- **Files:** 50+
-- **Modules:** 15+
+- **Files:** 80+
+- **Modules:** 25+
 
 ### **Features**
 - **Series:** Unlimited
 - **Files:** Unlimited
 - **File Types:** 6 special types
-- **Animations:** 20+ keyframes
-- **Settings:** 6 options
+- **Settings:** 7 options
 
 ### **Performance**
-- **Load Time:** <1s
-- **FPS:** 60 (particle system)
+- **Load Time:** <3s
 - **Storage:** 5-10MB typical
-- **Bundle Size:** ~150KB
+- **Bundle Size:** ~200KB
 
 ---
 
 ## **Contributing**
 
 ### **Ways to Help**
-1. 🐛 Report bugs
-2. 💡 Suggest features  
-3. 📝 Improve documentation
-4. 💻 Submit code
-5. 🎨 Create themes
-6. 📢 Spread the word
+1. Report bugs
+2. Suggest features  
+3. Improve documentation
+4. Submit code
+5. Create themes
+6. Spread the word
 
 
-## 🌊 **Philosophy**
+## **Philosophy**
 
 ### **Core Values**
 1. **User First** - Everything serves the user
 2. **Privacy** - No tracking, no accounts
 3. **Simplicity** - Complex features, simple UX
+4. **Easy on everyone** - Keep it simple, uncomplicated whenever possible
+5. **Code open** - Always open code. Absolute freedom in every aspect
 
 ### **Design Principles**
 1. **Progressive Disclosure** - Show what's needed, when needed
 2. **Consistent Patterns** - Similar things work similarly
 3. **Immediate Feedback** - User knows what happened
-4. **Forgiving** - Easy to undo, hard to break
+4. **Accessibility** - A tool must be always easily accessible, 3 clicks away max.
 
 ---
 
@@ -411,25 +387,25 @@ OceanBoard started as a personal project by **umaera** to solve a simple problem
 **Goals:**
 - ✅ Beautiful interface that inspires
 - ✅ Offline-first (no internet needed)
-- ✅ Privacy-respecting (no tracking)
-- ✅ Free forever (no ads)
-- ✅ Easy to use (no learning curve)
+- ✅ Privacy-respecting (no tracking, no ads)
+- ✅ Free forever (open code, for everyone)
+- ✅ Easy to use (everything a few clicks away)
 
-**Result:** OceanBoard - a creative workspace that makes writing fun!
+**Result:** OceanBoard - a creative workspace that makes writing & planning fun!
 
 ---
 
 ## **Contact & Community**
 
-- 🐛 **Bug Reports:** [Forms](https://forms.gle/VD4Qn2DiFyBh8Pib6)
-- 💡 **Feature Requests:** [Forms](https://forms.gle/VD4Qn2DiFyBh8Pib6)
-- 📧 **Email:** umaera.dev@gmail.com
+- **Bug Reports:** [Forms](https://forms.gle/VD4Qn2DiFyBh8Pib6)
+- **Feature Requests:** [Forms](https://forms.gle/VD4Qn2DiFyBh8Pib6)
+- **Email:** umaera.dev@gmail.com
 
 ---
 
 ## **Star History**
 
-If you like OceanBoard, give it a star on GitHub or make us a message on our [Forms](https://forms.gle/VD4Qn2DiFyBh8Pib6)!
+If you like OceanBoard, give it a star on GitHub or make us a rating on our [Forms](https://forms.gle/VD4Qn2DiFyBh8Pib6)!
 
 Every feeback motivates continued development and helps others discover the project!
 
@@ -451,7 +427,6 @@ To everyone who:
 <div align="center">
 
 ## **OceanBoard**
-**Made with 💖 by umaera**
 
 [Documentation](https://umaera.github.io/OceanBoard/docs) • [Roadmap](./docs/roadmap.md) • [GitHub](https://github.com/NotYarazi/OceanBoard)
 </div>

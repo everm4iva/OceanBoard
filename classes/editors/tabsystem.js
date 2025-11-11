@@ -43,7 +43,7 @@ export class TabSystem {
 		const tab = document.createElement('div');
 		tab.className = 'ob-tab';
 		tab.dataset.id = file.id;
-		tab.innerHTML = `<span class="ob-tab-title">${file.name}</span><span class="ob-tab-close material-icons-round" title="Close">close</span>`;
+		tab.innerHTML = `<span class="ob-tab-title">${file.name}</span><span class="ob-tab-close material-icons-round" translate="no" title="Close">close</span>`;
 		tab.querySelector('.ob-tab-title').onclick = () => this.openTab(file.id);
 		tab.querySelector('.ob-tab-close').onclick = (e) => {
 			e.stopPropagation();

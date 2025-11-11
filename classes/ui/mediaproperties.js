@@ -15,7 +15,7 @@ export function showMediaPropertiesModal(mediaId, currentProps = {}) {
 		<div class="ob-modal-header">
 			<h2>Media Properties</h2>
 			<button class="ob-modal-close">
-				<span class="material-icons-round">close</span>
+				<span class="material-icons-round" translate="no">close</span>
 			</button>
 		</div>
 		<div class="ob-modal-body">
@@ -26,7 +26,7 @@ export function showMediaPropertiesModal(mediaId, currentProps = {}) {
 						type="text" 
 						id="media-width" 
 						placeholder="e.g., 500px, 80%, auto" 
-						value="${currentProps.width || ''}"
+						value="${currentProps.width || ""}"
 					>
 					<small>Use px, %, or auto</small>
 				</div>
@@ -37,7 +37,7 @@ export function showMediaPropertiesModal(mediaId, currentProps = {}) {
 						type="text" 
 						id="media-height" 
 						placeholder="e.g., 300px, auto" 
-						value="${currentProps.height || ''}"
+						value="${currentProps.height || ""}"
 					>
 					<small>Use px or auto (optional)</small>
 				</div>
@@ -48,7 +48,7 @@ export function showMediaPropertiesModal(mediaId, currentProps = {}) {
 						type="text" 
 						id="media-maxwidth" 
 						placeholder="e.g., 800px, 100%" 
-						value="${currentProps.maxwidth || ''}"
+						value="${currentProps.maxwidth || ""}"
 					>
 					<small>Maximum width constraint</small>
 				</div>
@@ -56,10 +56,16 @@ export function showMediaPropertiesModal(mediaId, currentProps = {}) {
 				<div class="ob-form-group">
 					<label for="media-align">Alignment</label>
 					<select id="media-align">
-						<option value="" ${!currentProps.align ? 'selected' : ''}>Default</option>
-						<option value="left" ${currentProps.align === 'left' ? 'selected' : ''}>Left (float)</option>
-						<option value="center" ${currentProps.align === 'center' ? 'selected' : ''}>Center</option>
-						<option value="right" ${currentProps.align === 'right' ? 'selected' : ''}>Right (float)</option>
+						<option value="" ${!currentProps.align ? "selected" : ""}>Default</option>
+						<option value="left" ${
+							currentProps.align === "left" ? "selected" : ""
+						}>Left (float)</option>
+						<option value="center" ${
+							currentProps.align === "center" ? "selected" : ""
+						}>Center</option>
+						<option value="right" ${
+							currentProps.align === "right" ? "selected" : ""
+						}>Right (float)</option>
 					</select>
 					<small>How the media should be aligned</small>
 				</div>
@@ -211,7 +217,7 @@ function showMediaContextMenuAtCursor(event, mediaId, currentProps) {
 	
 	const item = document.createElement('div');
 	item.className = 'ob-context-menu-item';
-	item.innerHTML = `<span class="material-icons-round">settings</span>Media Properties`;
+	item.innerHTML = `<span class="material-icons-round" translate="no">settings</span>Media Properties`;
 	item.onclick = () => {
 		showMediaPropertiesModal(mediaId, currentProps);
 		menu.remove();

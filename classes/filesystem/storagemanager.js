@@ -106,13 +106,17 @@ export function showStorageWarning(percentUsed, onCleanup) {
 	modal.innerHTML = `
 		<div class="ob-modal">
 			<div class="ob-modal-header">
-				<span class="material-icons-round" style="color: #ff8080;">warning</span>
+				<span class="material-icons-round" style="color: #ff8080;" translate="no">warning</span>
 				<h2>Storage Almost Full</h2>
 			</div>
 			<div class="ob-modal-body">
 				<p style="margin-bottom: 16px;">
 					You're using <strong>${percentUsed.toFixed(1)}%</strong> of available storage. 
-					${percentUsed >= 95 ? 'You need to free up space immediately!' : 'Consider cleaning up to avoid issues.'}
+					${
+						percentUsed >= 95
+							? "You need to free up space immediately!"
+							: "Consider cleaning up to avoid issues."
+					}
 				</p>
 				<div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; margin-bottom: 16px;">
 					<h3 style="margin: 0 0 12px 0; font-size: 1rem;">Storage Breakdown:</h3>
@@ -144,11 +148,11 @@ export function showStorageWarning(percentUsed, onCleanup) {
 			</div>
 			<div class="ob-modal-footer">
 				<button class="ob-modal-btn ob-modal-btn-secondary" id="exportBackup">
-					<span class="material-icons-round">download</span>
+					<span class="material-icons-round" translate="no">download</span>
 					Export Backup First
 				</button>
 				<button class="ob-modal-btn ob-modal-btn-secondary" id="manageStorage">
-					<span class="material-icons-round">cleaning_services</span>
+					<span class="material-icons-round" translate="no">cleaning_services</span>
 					Manage Storage
 				</button>
 				<button class="ob-modal-btn ob-modal-btn-primary" id="closeWarning">
@@ -191,7 +195,7 @@ export function handleQuotaExceeded(operation = 'save') {
 		modal.innerHTML = `
 			<div class="ob-modal">
 				<div class="ob-modal-header" style="background: #ff5050;">
-					<span class="material-icons-round">error</span>
+					<span class="material-icons-round" translate="no">error</span>
 					<h2>Storage Full - Cannot ${operation}</h2>
 				</div>
 				<div class="ob-modal-body">
@@ -205,7 +209,11 @@ export function handleQuotaExceeded(operation = 'save') {
 								<span>Files:</span><span>${breakdown.files} MB</span>
 							</div>
 							<div style="display: flex; justify-content: space-between;">
-								<span>Media:</span><span style="color: ${parseFloat(breakdown.media) > 3 ? '#ff8080' : 'inherit'}">${breakdown.media} MB</span>
+								<span>Media:</span><span style="color: ${
+									parseFloat(breakdown.media) > 3
+										? "#ff8080"
+										: "inherit"
+								}">${breakdown.media} MB</span>
 							</div>
 							<div style="display: flex; justify-content: space-between;">
 								<span>Workspace:</span><span>${breakdown.workspace} MB</span>
@@ -222,7 +230,7 @@ export function handleQuotaExceeded(operation = 'save') {
 				</div>
 				<div class="ob-modal-footer">
 					<button class="ob-modal-btn ob-modal-btn-primary" id="exportNow" style="background: #ff80aa;">
-						<span class="material-icons-round">download</span>
+						<span class="material-icons-round" translate="no">download</span>
 						Export Workspace Now
 					</button>
 					<button class="ob-modal-btn ob-modal-btn-secondary" id="closeError">

@@ -86,10 +86,10 @@ function showFileIdError(errorMessage) {
 	const errorBanner = document.createElement('div');
 	errorBanner.className = 'ob-file-id-error';
 	errorBanner.innerHTML = `
-		<span class="material-icons-round">error</span>
+		<span class="material-icons-round" translate="no">error</span>
 		<span>File-ID Error: ${errorMessage}</span>
 		<button class="ob-error-dismiss" onclick="this.parentElement.remove()">
-			<span class="material-icons-round">close</span>
+			<span class="material-icons-round" translate="no">close</span>
 		</button>
 	`;
 	
@@ -109,10 +109,10 @@ function showFileIdConflict(fileId, conflictFile) {
 	const errorBanner = document.createElement('div');
 	errorBanner.className = 'ob-file-id-error';
 	errorBanner.innerHTML = `
-		<span class="material-icons-round">warning</span>
+		<span class="material-icons-round" translate="no">warning</span>
 		<span>File-ID "${fileId}" is already used by "${conflictFile}". Please choose a different ID.</span>
 		<button class="ob-error-dismiss" onclick="this.parentElement.remove()">
-			<span class="material-icons-round">close</span>
+			<span class="material-icons-round" translate="no">close</span>
 		</button>
 	`;
 	

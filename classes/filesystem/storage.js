@@ -25,7 +25,7 @@ export function saveWorkspace(seriesId = null) {
 			const icon = item.querySelector('.material-icons-round');
 			const textNodes = Array.from(item.childNodes).filter(node => node.nodeType === 3);
 			const episodeName = textNodes.map(n => n.textContent.trim()).join('').trim();
-			
+
 			if (episodeName) {
 				episodes.push({
 					name: episodeName,
@@ -123,7 +123,7 @@ export function restoreWorkspace(seriesId = null) {
 			const episodeIcon = typeof episode === 'string' ? 'description' : episode.icon;
 			
 			const item = document.createElement('li');
-			item.innerHTML = `<span class="material-icons-round">${episodeIcon}</span> ${episodeName}`;
+			item.innerHTML = `<span class="material-icons-round" translate="no">${episodeIcon}</span> ${episodeName}`;
 			addDragDropToElement(item);
 			list.appendChild(item);
 		});
@@ -141,7 +141,7 @@ export function restoreWorkspace(seriesId = null) {
 			
 			workspace.specialFiles.forEach(file => {
 				const item = document.createElement('li');
-				item.innerHTML = `<span class="material-icons-round">${file.icon}</span> ${file.name}`;
+				item.innerHTML = `<span class="material-icons-round" translate="no">${file.icon}</span> ${file.name}`;
 				addDragDropToElement(item);
 				specialList.appendChild(item);
 			});

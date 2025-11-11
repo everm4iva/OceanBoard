@@ -165,14 +165,17 @@
 	font-size: var(--editor-font-size, 1.05rem);
 }
 
-.ob-md-preview h1, .ob-md-preview h2, .ob-md-preview h3 {
+.ob-md-preview h1,
+.ob-md-preview h2,
+.ob-md-preview h3 {
 	color: var(--ob-color-main);
 	font-family: var(--ob-font-main);
 	margin-top: 1.2em;
 	margin-bottom: 0.6em;
 }
 
-.ob-md-preview code, .ob-md-preview pre {
+.ob-md-preview code,
+.ob-md-preview pre {
 	background: #232323;
 	color: var(--ob-color-main);
 	border-radius: 6px;
@@ -216,7 +219,8 @@
 	position: sticky;
 	bottom: 24px;
 	z-index: 100;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+		0 0 0 1px rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
 	animation: slideUp 0.3s ease-out;
 }
@@ -345,18 +349,18 @@
 }
 
 .ob-tab::before {
-	content: '';
+	content: "";
 	position: absolute;
 	bottom: 5px;
-    transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 	left: 50%;
 	right: 0;
 	height: 2px;
-    width: 80%;
+	width: 80%;
 	background: var(--ob-color-main);
 	opacity: 0;
 	transition: opacity 0.25s;
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
 .ob-tab-icon {
@@ -414,9 +418,9 @@
 	width: var(--ob-sidebar-width);
 	background-color: var(--ob-color-sidebar);
 	z-index: 2;
-    user-select: none;
-    -moz-user-select: none;
-    overflow-x: hidden;
+	user-select: none;
+	-moz-user-select: none;
+	overflow-x: hidden;
 }
 .ob-sidebar-bar {
 	width: var(--ob-sidebar-bar-width);
@@ -431,10 +435,10 @@
 	width: 44px;
 	height: 44px;
 	margin-bottom: 8px;
-	background-image: url('../../media/icons/Icon-Pink.svg');
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-image: url("../../media/icons/Icon-Pink.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .ob-nav-btn {
 	background: #fff;
@@ -461,7 +465,7 @@
 	flex-direction: column;
 	padding: 18px 0 0 18px;
 	min-width: 0;
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 .ob-project-title-static {
 	font-family: var(--ob-font-main);
@@ -502,7 +506,8 @@
 	margin: 0 4px;
 }
 
-.ob-tree-section, .ob-special-section {
+.ob-tree-section,
+.ob-special-section {
 	margin-bottom: 18px;
 	transition: opacity 0.2s, transform 0.2s;
 }
@@ -538,8 +543,8 @@
 	background: rgba(228, 57, 103, 0.15);
 }
 .ob-tree-title::before {
-	content: 'expand_more';
-	font-family: 'Material Icons Round';
+	content: "expand_more";
+	font-family: "Material Icons Round";
 	font-size: 1.2rem;
 	transition: transform 0.2s;
 }
@@ -808,13 +813,14 @@
 .ob-series-tiles {
 	display: flex;
 	flex-direction: column;
-	gap: 5%;
-	align-items: center;
+	gap: 2%;
+	align-items: start;
 	overflow-y: auto;
 	overflow-x: hidden;
-	max-height: calc(100vh - 200px);
+	min-height: 80vh;
 	padding-right: 4px;
 	scrollbar-width: none;
+	justify-content: start;
 }
 
 .ob-series-tiles::-webkit-scrollbar {
@@ -824,23 +830,30 @@
 
 .ob-series-tiles::before,
 .ob-series-tiles::after {
-	content: '';
+	content: "";
 	position: sticky;
 	left: 0;
 	right: 0;
-	height: 20px;
 	pointer-events: none;
 	z-index: 2;
 }
 
 .ob-series-tiles::before {
 	top: 0;
-	background: linear-gradient(to bottom, var(--ob-color-sidebar-bar) 0%, transparent 100%);
+	background: linear-gradient(
+		to bottom,
+		var(--ob-color-sidebar-bar) 0%,
+		transparent 100%
+	);
 }
 
 .ob-series-tiles::after {
 	bottom: 0;
-	background: linear-gradient(to top, var(--ob-color-sidebar-bar) 0%, transparent 100%);
+	background: linear-gradient(
+		to top,
+		var(--ob-color-sidebar-bar) 0%,
+		transparent 100%
+	);
 }
 
 .ob-series-tile {
@@ -855,7 +868,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 2px 8px #80203A22;
+	box-shadow: 0 2px 8px #80203a22;
 	letter-spacing: 1px;
 	cursor: pointer;
 	user-select: none;
@@ -891,7 +904,7 @@
 
 .ob-series-tile:hover {
 	background: var(--ob-color-main-light);
-	box-shadow: 0 4px 12px #80203A44;
+	box-shadow: 0 4px 12px #80203a44;
 	transform: scale(1.05);
 }
 
@@ -902,7 +915,7 @@
 }
 
 .ob-series-tile.active::after {
-	content: '';
+	content: "";
 	position: absolute;
 	right: -6px;
 	top: 50%;
@@ -1059,7 +1072,7 @@
 	overflow: hidden;
 }
 .ob-welcome-btn::before {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 0;
 	left: -100%;

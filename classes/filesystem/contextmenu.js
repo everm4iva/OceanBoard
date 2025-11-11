@@ -32,59 +32,59 @@ function createContextMenuElement() {
 	contextMenu.className = 'ob-context-menu';
 	contextMenu.innerHTML = `
 		<div class="ob-context-item" data-action="rename">
-			<span class="material-icons-round">edit</span>
+			<span class="material-icons-round" translate="no">edit</span>
 			<span>Rename</span>
 		</div>
 		<div class="ob-context-item" data-action="duplicate">
-			<span class="material-icons-round">content_copy</span>
+			<span class="material-icons-round" translate="no">content_copy</span>
 			<span>Duplicate</span>
 		</div>
 		<div class="ob-context-divider"></div>
 		<div class="ob-context-item" data-action="export-file">
-			<span class="material-icons-round">download</span>
+			<span class="material-icons-round" translate="no">download</span>
 			<span>Export File</span>
 		</div>
 		<div class="ob-context-item" data-action="export-season">
-			<span class="material-icons-round">folder_zip</span>
+			<span class="material-icons-round" translate="no">folder_zip</span>
 			<span>Export Season</span>
 		</div>
 		<div class="ob-context-item" data-action="import-file">
-			<span class="material-icons-round">upload</span>
+			<span class="material-icons-round" translate="no">upload</span>
 			<span>Import File</span>
 		</div>
 		<div class="ob-context-divider"></div>
 		<div class="ob-context-item" data-action="add-episode">
-			<span class="material-icons-round">note_add</span>
+			<span class="material-icons-round" translate="no">note_add</span>
 			<span>Add Episode</span>
 		</div>
 		<div class="ob-context-item" data-action="add-season">
-			<span class="material-icons-round">create_new_folder</span>
+			<span class="material-icons-round" translate="no">create_new_folder</span>
 			<span>Add Season</span>
 		</div>
 		<div class="ob-context-divider special-only"></div>
 		<div class="ob-context-item special-only" data-action="add-character">
-			<span class="material-icons-round">person</span>
+			<span class="material-icons-round" translate="no">person</span>
 			<span>Add Character</span>
 		</div>
 		<div class="ob-context-item special-only" data-action="add-object">
-			<span class="material-icons-round">category</span>
+			<span class="material-icons-round" translate="no">category</span>
 			<span>Add Object</span>
 		</div>
 		<div class="ob-context-item special-only" data-action="add-scene">
-			<span class="material-icons-round">landscape</span>
+			<span class="material-icons-round" translate="no">landscape</span>
 			<span>Add Scene</span>
 		</div>
 		<div class="ob-context-item special-only" data-action="add-action">
-			<span class="material-icons-round">event</span>
+			<span class="material-icons-round" translate="no">event</span>
 			<span>Add Action</span>
 		</div>
 		<div class="ob-context-item special-only" data-action="add-attribute">
-			<span class="material-icons-round">label</span>
+			<span class="material-icons-round" translate="no">label</span>
 			<span>Add Attribute</span>
 		</div>
 		<div class="ob-context-divider"></div>
 		<div class="ob-context-item ob-context-danger" data-action="delete">
-			<span class="material-icons-round">delete</span>
+			<span class="material-icons-round" translate="no">delete</span>
 			<span>Delete</span>
 		</div>
 	`;
@@ -353,7 +353,7 @@ function handleAddEpisode() {
 	const episodeName = `[EP${episodeCount}] - New Episode`;
 	
 	const newEpisode = document.createElement('li');
-	newEpisode.innerHTML = `<span class="material-icons-round">description</span> ${episodeName}`;
+	newEpisode.innerHTML = `<span class="material-icons-round" translate="no">description</span> ${episodeName}`;
 	addDragDropToElement(newEpisode);
 	list.appendChild(newEpisode);
 	attachFileClickHandlers();
@@ -371,7 +371,7 @@ function handleAddSeason() {
 	newSection.innerHTML = `
 		<div class="ob-tree-title">${seasonName}</div>
 		<ul class="ob-tree-list">
-			<li><span class="material-icons-round">description</span> [EP1] - First Episode</li>
+			<li><span class="material-icons-round" translate="no">description</span> [EP1] - First Episode</li>
 		</ul>
 	`;
 	
@@ -417,7 +417,7 @@ function handleAddSpecialFile(type) {
 	localStorage.setItem(`ob-file-${fileName}`, initialContent);
 	
 	const newFile = document.createElement('li');
-	newFile.innerHTML = `<span class="material-icons-round">${config.icon}</span> ${fileName}`;
+	newFile.innerHTML = `<span class="material-icons-round" translate="no">${config.icon}</span> ${fileName}`;
 	addDragDropToElement(newFile);
 	list.appendChild(newFile);
 	attachFileClickHandlers();

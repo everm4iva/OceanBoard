@@ -68,7 +68,7 @@
 	text-decoration: underline;
 }
 
-/* Confirmation Bubble (for natural mentions) */
+/* Confirmation Bubble */
 .ob-mention-bubble {
 	position: absolute;
 	display: flex;

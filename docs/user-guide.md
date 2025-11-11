@@ -46,15 +46,20 @@ Think of seasons as **chapters** or **sections** of your project!
 2. The editor appears with two panels:
    - **Left:** Where you type (Markdown)
    - **Right:** Live preview (see the result!)
+3. Explore your ambient (Tip: press ctrl + K (or cmd + K if you are on mac) to open command palette. Makes your life easier)
 3. Start writing!
 
 ### Step 5: Format Your Text
 Use the toolbar at the bottom:
-- **B** - Make text bold
-- **I** - Make text italic
-- **H1, H2, H3** - Headings
-- And more!
-
+- `**B**` - Make text bold
+- `**I**` - Make text italic
+- ` - Make code words
+- `*H1, H2, H3*` - Headings
+- `~~strikethrough~~` - Lines through
+- `- BulletList` - Make bullet
+- `> BlockQuote` - Make quotes
+- `[Text](link)` - To make LINKS!
+- `![img-url]` or `$img-name` - to insert images
 ---
 
 ## **Understanding the Interface**
@@ -70,6 +75,7 @@ Use the toolbar at the bottom:
 
 **Buttons:**
 - **+ (top)** - Create new series
+- **Command** - Open commands
 - **Export** - Backup your work
 - **Import** - Restore from backup
 - **Settings** - Customize OceanBoard
@@ -94,9 +100,8 @@ Six file types for reference:
 - **A** (Action) - Red - Action sequences
 - **AT** (Attribute) - Yellow - Character traits
 
-#### 3. **Trash**
-- Deleted items go here first
-- Empty trash to permanently delete
+#### 3. **Media**
+- All images/videos/audios you upload will be here, neatly organized and ready to click to insert.
 
 ### The Editor Area
 **Location:** Center/right side
@@ -171,9 +176,7 @@ Result: *This is italic*
 ```
 
 #### **Code**
-```markdown
-single line of code
-```
+`single line of code`
 
 #### **Code Block**
 ```markdown
@@ -189,7 +192,7 @@ of code here
 
 ---
 
-## 💾 **Saving Your Work**
+## **Saving Your Work**
 
 ### Auto-Save
 - **Saves every 15 seconds** by default
@@ -259,7 +262,7 @@ Autosave: 15 seconds
 1. Right-click series tile
 2. Choose "Change Cover"
 3. Select image (GIF supported!)
-4. **Tip:** Keep under 2MB
+4. **Tip:** Keep under 1MB
 
 ### Remove Cover
 1. Right-click series tile
@@ -394,7 +397,7 @@ Autosave: 15 seconds
 - Export as backup just in case
 
 ### "I deleted something by accident!"
-- Check the Trash section
+- ctrl + z (command + z)
 - Restore from there
 - If emptied trash: restore from backup
 
